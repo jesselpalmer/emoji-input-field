@@ -4,6 +4,8 @@
   "description": "HTML Input field that transforms text into emojis while typing",
   "main": "index.js",
   "scripts": {
+    "prettier:check": "./node_modules/.bin/prettier --single-quote --no-semi --check 'src/**/*.js'",
+    "prettier:fix": "./node_modules/.bin/prettier --single-quote --no-semi --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
