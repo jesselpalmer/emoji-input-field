@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jesselpalmer/emoji-input-field/issues"
   },
-  "homepage": "https://github.com/jesselpalmer/emoji-input-field#readme"
+  "homepage": "https://github.com/jesselpalmer/emoji-input-field#readme",
+  "devDependencies": {
+    "mocha": "^6.2.0"
+  }
 }
