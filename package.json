@@ -1,0 +1,19 @@
+{
+  "name": "emoji-input-field",
+  "version": "0.0.0",
+  "description": "HTML Input field that transforms text into emojis while typing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesselpalmer/emoji-input-field.git"
+  },
+  "author": "Jesse Palmer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jesselpalmer/emoji-input-field/issues"
+  },
+  "homepage": "https://github.com/jesselpalmer/emoji-input-field#readme"
+}
