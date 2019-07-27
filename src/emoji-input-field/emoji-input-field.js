@@ -14,13 +14,15 @@ class EmojiInputBox extends HTMLElement {
   }
 
   textChangeHandler(event) {
-    if (!this.isColonEntered && event.data === ':') {
+    const EMOJI_ESCAPE_KEY = ':'
+
+    if (!this.isColonEntered && event.data === EMOJI_ESCAPE_KEY) {
       this.isColonEntered = true
       console.log('start escaping')
     } else if (this.isColonEntered && event.data === ' ') {
       this.isColonEntered = false
       console.log('not an emoji. exit escaping.')
-    } else if (this.isColonEntered && event.data === ':') {
+    } else if (this.isColonEntered && event.data === EMOJI_ESCAPE_KEY) {
       console.log('exit escaping')
       this.isColonEntered = false
     } else if (this.isColonEntered) {
