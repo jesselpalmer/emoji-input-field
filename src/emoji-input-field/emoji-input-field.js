@@ -32,14 +32,6 @@ class EmojiInputField extends HTMLElement {
 
     console.log(this.isColonEntered)
   }
-
-  isTextEmojiEscaped() {
-
-  }
-
-  getTextEmojiState() {
-
-  }
 }
 
 customElements.define('emoji-input-field', EmojiInputField)
