@@ -1,4 +1,4 @@
-class EmojiInputBox extends HTMLElement {
+class EmojiInputField extends HTMLElement {
   constructor() {
     super()
 
@@ -32,6 +32,14 @@ class EmojiInputBox extends HTMLElement {
 
     console.log(this.isColonEntered)
   }
+
+  isTextEmojiEscaped() {
+
+  }
+
+  getTextEmojiState() {
+
+  }
 }
 
-customElements.define('emoji-input-box', EmojiInputBox)
+customElements.define('emoji-input-field', EmojiInputField)
