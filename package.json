@@ -4,8 +4,11 @@
   "description": "HTML Input field that transforms text into emojis while typing",
   "main": "index.js",
   "scripts": {
+    "copy-file": "cp ./src/emoji-input-field/emoji-input-field.js ./test-app/emoji-input-field.js",
     "prettier:check": "./node_modules/.bin/prettier --single-quote --no-semi --check 'src/**/*.js'",
     "prettier:fix": "./node_modules/.bin/prettier --single-quote --no-semi --write 'src/**/*.js'",
+    "start": "npm run copy-file && npm run start:test-app",
+    "start:test-app": "./node_modules/.bin/serve ./test-app", 
     "test": "./node_modules/.bin/mocha './src/**/*.spec.js' --require @babel/register"
   },
   "repository": {
@@ -23,6 +26,7 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/register": "^7.5.5",
     "mocha": "^6.2.0",
-    "prettier": "1.18.2"
+    "prettier": "1.18.2",
+    "serve": "^11.1.0"
   }
 }
