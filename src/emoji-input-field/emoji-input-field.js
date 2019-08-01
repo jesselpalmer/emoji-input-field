@@ -14,10 +14,14 @@ class EmojiInputField extends HTMLElement {
       if (this.shouldTextEscapingStart(this.isTextEscaped, char)) {
         this.isTextEscaped = true
         console.log('start escaping')
-      } else if (this.shouldTextEscapingStopBlankSpace(this.isTextEscaped, char)) {
+      } else if (
+        this.shouldTextEscapingStopBlankSpace(this.isTextEscaped, char)
+      ) {
         this.isTextEscaped = false
         console.log('not an emoji. exit escaping.')
-      } else if (this.shouldTextEscapingStopClosingColon(this.isTextEscaped, char)) {
+      } else if (
+        this.shouldTextEscapingStopClosingColon(this.isTextEscaped, char)
+      ) {
         console.log('exit escaping')
         this.isTextEscaped = false
       } else if (this.shouldSearchForEmoji(this.isTextEscaped)) {

@@ -10,18 +10,21 @@ class EmojiInputField extends HTMLElement {
     input.type = 'text'
     input.oninput = event => {
       const char = event.data
-      let isTextEscaped = this.isTextEscaped
 
-      if (this.shouldTextEscapingStart(isTextEscaped, char)) {
-        isTextEscaped = true
+      if (this.shouldTextEscapingStart(this.isTextEscaped, char)) {
+        this.isTextEscaped = true
         console.log('start escaping')
-      } else if (this.shouldTextEscapingStopBlankSpace(isTextEscaped, char)) {
-        TextEscaped = false
+      } else if (
+        this.shouldTextEscapingStopBlankSpace(this.isTextEscaped, char)
+      ) {
+        this.isTextEscaped = false
         console.log('not an emoji. exit escaping.')
-      } else if (this.shouldTextEscapingStopClosingColon(isTextEscaped, char)) {
+      } else if (
+        this.shouldTextEscapingStopClosingColon(this.isTextEscaped, char)
+      ) {
         console.log('exit escaping')
-        isTextEscaped = false
-      } else if (this.shouldSearchForEmoji(isTextEscaped)) {
+        this.isTextEscaped = false
+      } else if (this.shouldSearchForEmoji(this.isTextEscaped)) {
         console.log('validating emoji text')
       }
 
