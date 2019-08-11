@@ -26,12 +26,41 @@ class EmojiInputField extends HTMLElement {
         this.isTextEscaped = false
       } else if (this.shouldSearchForEmoji(this.isTextEscaped)) {
         console.log('validating emoji text')
+        const currentInputBoxText = input.value
+        const locationOfLastColon = currentInputBoxText.lastIndexOf(':')
+        const currentEmojiSearchText = currentInputBoxText.substring(locationOfLastColon + 1)
+
+        if (currentEmojiSearchText.length >= 2) {
+          console.log(currentEmojiSearchText)
+          console.log(this.getMatchingEmojis(currentEmojiSearchText))
+        }
       }
 
       console.log(this.isTextEscaped)
     }
 
     shadow.appendChild(input)
+  }
+
+  getMatchingEmojis(text) {
+    const emojis = [
+      {
+        smile: '😊'
+      },
+      {
+        smiley: '😊'
+      },
+      {
+        heart: '❤️'
+      }
+    ]
+
+    const matchingEmojis = emojis.filter(emoji => {
+      const emojiName = Object.keys(emoji)[0]
+      return emojiName.match(text)
+    })
+
+    return matchingEmojis
   }
 
   shouldTextEscapingStart(isTextEscaped, char) {
