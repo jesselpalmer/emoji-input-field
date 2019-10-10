@@ -1,3 +1,5 @@
+import emojis from './emojis.js'
+
 class EmojiInputField extends HTMLElement {
   constructor() {
     super()
@@ -43,22 +45,11 @@ class EmojiInputField extends HTMLElement {
   }
 
   getMatchingEmojis(text) {
-    const emojis = [
-      {
-        smile: '😊'
-      },
-      {
-        smiley: '😊'
-      },
-      {
-        heart: '❤️'
-      }
-    ]
-
-    const matchingEmojis = emojis.filter(emoji => {
-      const emojiName = Object.keys(emoji)[0]
-      return emojiName.match(text)
+    const matchingEmojiNames = Object.keys(emojis).filter(emojiName => {
+      return emojiName.includes(text)
     })
+
+    const matchingEmojis = matchingEmojiNames.map(emojiName => emojis[emojiName])
 
     return matchingEmojis
   }
