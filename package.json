@@ -22,10 +22,10 @@
   },
   "homepage": "https://github.com/jesselpalmer/emoji-input-field#readme",
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/register": "^7.5.5",
-    "mocha": "^6.2.0",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/register": "^7.6.2",
+    "mocha": "^6.2.1",
     "prettier": "1.18.2",
     "serve": "^11.1.0"
   }
