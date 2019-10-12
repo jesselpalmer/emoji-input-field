@@ -7,7 +7,7 @@
     "copy-files": "cp -a ./src/emoji-input-field/*.* ./test-app/",
     "prettier:check": "./node_modules/.bin/prettier --single-quote --no-semi --check 'src/**/*.js'",
     "prettier:fix": "./node_modules/.bin/prettier --single-quote --no-semi --write 'src/**/*.js'",
-    "start": "npm run copy-file && npm run start:test-app",
+    "start": "npm run copy-files && npm run start:test-app",
     "start:test-app": "./node_modules/.bin/serve ./test-app",
     "test": "./node_modules/.bin/mocha './src/**/*.spec.js' --require @babel/register"
   },
