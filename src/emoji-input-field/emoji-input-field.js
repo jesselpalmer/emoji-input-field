@@ -35,7 +35,7 @@ class EmojiInputField extends HTMLElement {
         if (currentEmojiSearchText.length >= 2) {
           console.log(currentEmojiSearchText)
           const matchingEmojis = this.getMatchingEmojis(currentEmojiSearchText)
-          this.displayMatchingEmojis(matchingEmojis)
+          this.renderMatchingEmojis(matchingEmojis)
         }
       }
 
@@ -45,8 +45,10 @@ class EmojiInputField extends HTMLElement {
     shadow.appendChild(input)
   }
 
-  displayMatchingEmojis(matchingEmojis) {
-    console.log(matchingEmojis)
+  renderMatchingEmojis(matchingEmojis) {
+    matchingEmojis.forEach(matchingEmojis => {
+      console.log(matchingEmojis)
+    })
   }
 
   getMatchingEmojis(text) {
