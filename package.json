@@ -31,5 +31,8 @@
     "serve": "^11.1.0",
     "webpack": "^5.30.0",
     "webpack-cli": "^4.6.0"
+  },
+  "dependencies": {
+    "node-emojis": "0.0.5"
   }
 }
